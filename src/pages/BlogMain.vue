@@ -51,7 +51,7 @@
         <button
           class="btn btn-primary"
           @click="commentForm = !commentForm"
-        >Show {{ comments.length }} Comments</button>
+        >Show/Hide {{ comments.length }} Comments</button>
       </div>
     </div>
     <!-- SECTION row 3 -->
