@@ -1,5 +1,5 @@
 <template>
-  <!-- ANCHOR This is so much chaos. I tried to split it, but... too much work -->
+  <!-- ANCHOR This is so much chaos. I tried to split it, but gave up-->
   <div class="blog-main container">
     <!-- SECTION row 1 -->
     <div class="row d-flex justify-content-center mt-2">
