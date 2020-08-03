@@ -70,8 +70,8 @@ export default new Vuex.Store({
       try {
         let res = await api.get("profile");
         commit("setUser", res.data);
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -80,8 +80,8 @@ export default new Vuex.Store({
         let res = await api.delete("comments/" + id);
         commit("deleteUserComment", id);
         dispatch("getUserComments");
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -89,8 +89,8 @@ export default new Vuex.Store({
       try {
         let res = await api.get("profile/blogs");
         commit("setUserBlogs", res.data);
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -98,19 +98,20 @@ export default new Vuex.Store({
       try {
         let res = await api.get("profile/comments");
         commit("setUserComments", res.data);
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
     // SECTION Comment Actions
+
     async getComments({ commit, dispatch }, id) {
       try {
         let res = await api.get("blogs/" + id);
         commit("setComments", res.data.comments);
         dispatch("getBlogMain", id);
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -119,8 +120,8 @@ export default new Vuex.Store({
         let res = await api.post("comments", commentDetails);
         commit("addComment", res.data);
         dispatch("getComments");
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -129,8 +130,8 @@ export default new Vuex.Store({
         let res = await api.delete("comments/" + id);
         commit("deleteComment", id);
         dispatch("getComments");
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -138,8 +139,8 @@ export default new Vuex.Store({
       try {
         let res = await api.put("comments/" + commentDetails.id, commentDetails);
         dispatch("getComments", commentDetails.blogId);
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -149,8 +150,8 @@ export default new Vuex.Store({
       try {
         let res = await api.get("blogs");
         commit("setBlogs", res.data);
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -158,8 +159,8 @@ export default new Vuex.Store({
       try {
         let res = await api.get("blogs/" + id);
         commit("setActiveBlog", res.data);
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -167,8 +168,8 @@ export default new Vuex.Store({
       try {
         let res = await api.post("blogs", blogMain);
         dispatch("getAllBlogs");
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -176,8 +177,8 @@ export default new Vuex.Store({
       try {
         let res = await api.delete("blogs/" + id);
         router.push({ name: "Home" });
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     },
 
@@ -185,8 +186,8 @@ export default new Vuex.Store({
       try {
         let res = await api.put("blogs/" + blogMain.id, blogMain);
         dispatch("getBlogMain", blogMain.id);
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
       }
     }
 

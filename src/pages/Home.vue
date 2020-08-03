@@ -20,7 +20,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
+              <h5 class="modal-title">Make a New Post!</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -42,7 +42,7 @@
                   </div>
                   <div class="row justify-content-center">
                     <div class="form-group w-100 mx-3 text-center">
-                      <label for="blogInfo" class="mt-2">Blog Body:</label>
+                      <label for="blogInfo" class="mt-2">Post Body:</label>
                       <textarea class="form-control" v-model="newBlog.body" id="blogInfo" rows="3"></textarea>
                     </div>
                   </div>
