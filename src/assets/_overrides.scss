@@ -1,0 +1,13 @@
+.btn-primary {
+  color: $light;
+  background-color: $primary;
+  border-color: darken($color: $primary, $amount: 10);
+
+}
+
+.btn-danger {
+  color: $light;
+  background-color: $softpink;
+  border-color: darken($color: $softpink, $amount: 10);
+
+}
